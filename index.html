@@ -1,40 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <!--seems to be standard for html besides title-->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RaiderSecurity</title>
-
+    <title>AVSVA - Raider Security | Army Research Lab Partnership</title>
     <link rel="stylesheet" href="Static/css/style.css">
-
 </head>
-
 <body>
-    <img src="Static/images/ttuLogo.png" style="width:300px;height:350px;">
-    <h1>RaiderSecurity</h1>
-    <div>
-        <h2>Group Members</h2>
-        <p><img src="Static/images/GageJohnson.png" style="width: 50px;height: 50px;">   Gage Johnson - Group Leader</p>
-        <p><img src="Static/images/ReidLayne.png" style="width: 60px;height: 60px;">    Reid Layne - Meeting Organizer </p>
-        <p><img src="Static/images/TylerBowen.png" style="width: 50px;height: 70px;">   Tyler Bowen - Technical Lead</p>
-        <p><img src="Static/images/NickSanches.png" style="width: 60px; height: 60;">       Nick Sanchez - Testing & QA Lead</p>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo">
+                    <img src="Static/images/texas_tech_logo.png" alt="Texas Tech Logo" class="ttu-logo">
+                </div>
+                <div class="header-text">
+                    <h1>AVSVA</h1>
+                    <p class="subtitle">Autonomous Vehicle Simulation and Vulnerability Analyzer</p>
+                    <div class="project-info">
+                        <p><strong>Project 14 - Raider Security</strong></p>
+                        <p>Partnership with Army Research Lab</p>
+                        <p>Texas Tech University | Fall 2025</p>
+                    </div>
+                </div>
+                <div class="header-badge">
+                    <h3>Mission Critical</h3>
+                    <p>Simulating Threats. Detecting Vulnerabilities. Securing Autonomous Systems.</p>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: #cc0000; font-weight: bold;">DEFENSE THROUGH INNOVATION</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div>
-        <h2>Meetings and Activities</h2>
-        <p>Group Formation and selection of project - 08/26/25</p>
-        <p>Meeting with ARL(Army Research Lab) to go over project - 09/19/25</p>
-        <p>Second Meeting with ARL(Army Research Lab) to go over new version of project - 09/26/25</p>
-        <p>Discord Call to go over SRS and finish SRS as well as presentation for first deliverables - 09/28/25</p>
-    </div>
+    <!-- Vehicle Showcase -->
+    <section class="vehicle-showcase">
+        <div class="container">
+            <h2>Clearpath Husky Platform</h2>
+            <p style="color: #a8c99e; max-width: 800px; margin: 0 auto;">Working with autonomous vehicle data from Army Research Lab's Husky unmanned ground vehicles to simulate, analyze, and test vulnerabilities in autonomous systems.</p>
+            
+            <div class="vehicle-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="Static/images/husky1.jpg" alt="Husky Field Operations" onerror="this.parentElement.innerHTML='Image not found.'">
+                    </div>
+                    <h3>Field Operations</h3>
+                    <p>Husky vehicle conducting autonomous navigation missions</p>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="Static/images/husky3.jpg" alt="Husky Sensor Suite" onerror="this.parentElement.innerHTML='Image not found.'">
+                    </div>
+                    <h3>Sensor Suite</h3>
+                    <p>IMU, GPS/NavSat, and velocity sensors in action</p>
+                </div>
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="Static/images/husky6.jpg" alt="Husky Data Collection" onerror="this.parentElement.innerHTML='Image not found.'">
+                    </div>
+                    <h3>Data Collection</h3>
+                    <p>ROS bag file recording for vulnerability analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-        <h2>Planned Meetings</h2>
-        <p>Go Through Data - October 1st - October 5th</p>
-    </div>
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Raider Security Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="Static/images/ReidLayne.png" alt="Reid Layne" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23333\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'%23999\' font-size=\'20\' text-anchor=\'middle\' dy=\'.3em\'%3EAdd Photo%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="member-name">Reid Layne</div>
+                    <div class="member-role">Requirements & Testing Lead</div>
+                    <div class="member-description">
+                        Drafted functional requirements and initial use cases. Leading validation efforts ensuring simulation results align with baseline scenarios. Plan to conduct stakeholder interviews and integrate security research findings into project documentation.
+                    </div>
+                    <div class="member-email">reilayne@ttu.edu</div>
+                </div>
 
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="Static/images/TylerBowen.png" alt="Tyler Bowen" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23333\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'%23999\' font-size=\'20\' text-anchor=\'middle\' dy=\'.3em\'%3EAdd Photo%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="member-name">Tyler Bowen</div>
+                    <div class="member-role">UI/UX & Visualization Lead</div>
+                    <div class="member-description">
+                        Leading design for user interface concepts for simulation control and data visualization. Developing visualization outputs including time-series plots and heatmaps. Tracking performance benchmarks and preparing project presentation materials.
+                    </div>
+                    <div class="member-email">tylbowen@ttu.edu</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="Static/images/GageJohnson.png" alt="Gage Johnson" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23333\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'%23999\' font-size=\'20\' text-anchor=\'middle\' dy=\'.3em\'%3EAdd Photo%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="member-name">Gage Johnson</div>
+                    <div class="member-role">Data Analysis & ROS Integration</div>
+                    <div class="member-description">
+                        Managing ROS simulation environment for bag file playback. Builing workflows for CSV data extraction and alignment. Leading data characterization efforts including statistical analysis, correlation studies, and anomaly detection pipelines.
+                    </div>
+                    <div class="member-email">gage.d.johnson@ttu.edu</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="Static/images/NickSanchez.png" alt="Nick Sanchez" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23333\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' fill=\'%23999\' font-size=\'20\' text-anchor=\'middle\' dy=\'.3em\'%3EAdd Photo%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="member-name">Nick Sanchez</div>
+                    <div class="member-role">Security & Vulnerability Testing</div>
+                    <div class="member-description">
+                        Leading development of anomaly injection framework including spike noise, packet drops, and spoofing scenarios. Managing security and vulnerability testing, documenting observed vehicle failure states. Developing audit logs for experiment tracking.
+                    </div>
+                    <div class="member-email">nicolas232.sanchez@ttu.edu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meetings Section -->
+    <section class="meetings-section">
+        <div class="container">
+            <h2 class="section-title">Project Meetings</h2>
+            
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">August 26, 2025</div>
+                    <div class="meeting-time">5:00 PM - 6:30 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>Initial Project Kickoff</strong> - Group formation and inital selection of capstone project, Selected Project 14 - Threat analysis within a provided dataset. Originally was Texas Tech logged TCP data to analyze for network threats.
+                </div>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">September, 19 2025</div>
+                    <div class="meeting-time">3:00 PM - 3:30 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>ARL Introduction Meeting</strong> - Introduction meeting where we provided intrests and background to Dr. Erbacher with ARL, he in turn provided guidence with where we can go with our project and offered a couple collabration project ideas to collaberate with ARL.
+                </div>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">September 26, 2025</div>
+                    <div class="meeting-time">3:00 PM - 3:30 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>ARL Project Scope Meeting</strong> - Met with Dr. Erbacher from Army Research Lab to receive project requirements and initial data package. Discussed scope, objectives, and deliverables for autonomous vehicle vulnerability analysis.
+                </div>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">September 28, 2025</div>
+                    <div class="meeting-time">6:00 PM - 11:00 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>Requirements Review & SRS Finalization</strong> - Completed Software Requirements Specification document. Reviewed functional requirements, use cases, and interface designs. Assigned individual component responsibilities for implementation phase.
+                </div>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">October 7, 2025</div>
+                    <div class="meeting-time">3:00 PM - 4:00 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>Initial Project Presentation Practice</strong> - Prepared for upcoming presentation by practicing speaking points and designating slides to each team member to present.
+                </div>
+            </div>
+<!--
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">November 4, 2025</div>
+                    <div class="meeting-time">3:00 PM - 4:30 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>Midterm Progress Review</strong> - Presented simulation playback capabilities and preliminary data analysis results. Demonstrated anomaly injection framework prototypes and received feedback on vulnerability testing approaches.
+                </div>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-date">TBD</div>
+                    <div class="meeting-time">2:00 PM - 3:00 PM</div>
+                </div>
+                <div class="meeting-description">
+                    <strong>Integration Testing Session</strong> - Tested complete workflow from bag playback through anomaly injection to report generation. Identified integration issues and performance bottlenecks requiring optimization.
+                </div>
+            </div>
+        </div>
+    -->
+    </section>
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Project Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2025</div>
+                        <div class="timeline-title">Project Initiation</div>
+                        <div class="timeline-description">
+                            Received project assignment and initial data package from Army Research Lab. Conducted stakeholder interviews with cybersecurity professionals and established project scope and objectives.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2025</div>
+                        <div class="timeline-title">Requirements & Design</div>
+                        <div class="timeline-description">
+                            Completed Software Requirements Specification document. Designed system architecture, user interfaces, and data processing workflows. Set up development environment with ROS 1 Noetic and Python libraries.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2025</div>
+                        <div class="timeline-title">Core Development</div>
+                        <div class="timeline-description">
+                            Implement bag file playback simulation, CSV data characterization modules, and initial anomaly injection capabilities. Develop correlation analysis and statistical anomaly detection algorithms.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October/November 2025</div>
+                        <div class="timeline-title">Integration & Testing</div>
+                        <div class="timeline-description">
+                            Integrate all system components and conduct comprehensive testing. Perform vulnerability testing with various anomaly injection scenarios including GPS spoofing, velocity tampering, and IMU data manipulation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2026</div>
+                        <div class="timeline-title">Validation & Documentation</div>
+                        <div class="timeline-description">
+                            Validate results against baseline scenarios and cross-reference findings with established vulnerability databases. Completed comprehensive documentation including user guides and technical manuals.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2026</div>
+                        <div class="timeline-title">Final Presentation & Delivery</div>
+                        <div class="timeline-description">
+                            Prepare and deliver final project presentation to Texas Tech faculty and Army Research Lab stakeholders. Demonstrated complete system capabilities and delivered all project deliverables including source code, documentation, and analysis reports.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">AVSVA | Senior Capstone Project</div>
+            <img src="Static/images/texas_tech_logo.png" alt="Texas Tech Logo" class="ttu-logo-footer">
+            <p><strong>Raider Security</strong></p>
+            <p>Texas Tech University Computer Science Department</p>
+            <p>In Partnership with Army Research Lab</p>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #d4af37;">
+                © 2025 Raider Security | Texas Tech University | All Rights Reserved
+            </p>
+        </div>
+    </footer>
 </body>
-
-
 </html>

@@ -1,20 +1,554 @@
-/* is the basis for our website, center text aligning the background color and font we use */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Garamond', serif;
-    background-color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #e8e8e8;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 40px 0;
+    border-bottom: 3px solid #cc0000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.header-logo {
+    flex-shrink: 0;
+}
+
+.ttu-logo {
+    width: 120px;
+    height: auto;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.ttu-logo:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.header-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.project-info {
+    background: rgba(204, 0, 0, 0.1);
+    padding: 15px 20px;
+    border-left: 3px solid #cc0000;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.project-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #d0d0d0;
+}
+
+.header-badge {
+    background: rgba(204, 0, 0, 0.15);
+    border: 2px solid #cc0000;
+    padding: 25px;
+    border-radius: 8px;
     text-align: center;
-    padding: 100px;
+    min-width: 240px;
+}
+
+.header-badge h3 {
+    color: #cc0000;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header-badge p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.5;
+}
+
+/* Vehicle Showcase Section */
+.vehicle-showcase {
+    background: #0f0f0f;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.vehicle-showcase h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.vehicle-showcase > .container > p {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.vehicle-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(204, 0, 0, 0.2);
+    border-color: #cc0000;
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 250px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1rem;
+    border-bottom: 1px solid #2a2a2a;
+    overflow: hidden;
+    position: relative;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover .vehicle-image img {
+    transform: scale(1.05);
+}
+
+.vehicle-card h3 {
+    color: #ffffff;
+    margin: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.vehicle-card p {
+    color: #a0a0a0;
+    margin: 0 20px 20px;
+    font-size: 0.95rem;
+}
+
+/* Team Section */
+.team-section {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #cc0000;
+    margin: 20px auto 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(204, 0, 0, 0.2);
+    border-color: #cc0000;
+}
+
+.member-photo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #2a2a2a;
+    transition: border-color 0.3s ease;
+}
+
+.team-member:hover .member-photo {
+    border-color: #cc0000;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.member-role {
+    font-size: 1rem;
+    color: #cc0000;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.member-description {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.member-email {
+    font-size: 0.85rem;
+    color: #888;
+    word-break: break-all;
+}
+
+/* Meetings Section */
+.meetings-section {
+    background: #0f0f0f;
+    padding: 80px 0;
+}
+
+.meeting-card {
+    background: #1a1a1a;
+    border-left: 3px solid #cc0000;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.meeting-card:hover {
+    background: #1f1f1f;
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(204, 0, 0, 0.15);
+}
+
+.meeting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.meeting-date {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.meeting-time {
+    background: rgba(204, 0, 0, 0.15);
+    color: #cc0000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(204, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+.meeting-description {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.meeting-description strong {
     color: #ffffff;
 }
 
-/* is the number by the initiative order */  
-h1 {
-    color: #c40303;
-    font-size: 2.5rem;
+/* Timeline Section */
+.timeline-section {
+    padding: 80px 0;
+    background: #0a0a0a;
 }
 
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-h2 {
-    color: #c40303;
-    font-size: 1.5rem;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #2a2a2a;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: calc(50% - 40px);
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    padding-left: 40px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-right: auto;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-content {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: #1f1f1f;
+    border-color: #cc0000;
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(204, 0, 0, 0.2);
+}
+
+.timeline-date {
+    color: #cc0000;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.timeline-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.timeline-description {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #cc0000;
+    border: 3px solid #0a0a0a;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+    left: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+    right: -8px;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 50px 0 30px;
+    text-align: center;
+    border-top: 3px solid #cc0000;
+}
+
+footer p {
+    color: #a0a0a0;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.footer-logo {
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.ttu-logo-footer {
+    width: 100px;
+    height: auto;
+    margin: 25px auto;
+    display: block;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.ttu-logo-footer:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.footer-links {
+    margin-top: 25px;
+}
+
+.footer-links a {
+    color: #cc0000;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .vehicle-showcase h2 {
+        font-size: 2rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        padding-left: 60px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline-item .timeline-marker,
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker {
+        left: 12px !important;
+        right: auto !important;
+    }
+
+    .member-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-logo {
+        order: -1;
+    }
+
+    .ttu-logo {
+        width: 100px;
+    }
+
+    .ttu-logo-footer {
+        width: 80px;
+    }
+
+    .header-badge {
+        width: 100%;
+    }
+
+    .project-info {
+        text-align: left;
+    }
 }
